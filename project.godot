@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "AIPlayer",
+"language": "GDScript",
+"path": "res://scripts/ai_player.gd"
+}, {
+"base": "Node",
+"class": "Player",
+"language": "GDScript",
+"path": "res://scripts/player.gd"
+} ]
+_global_script_class_icons={
+"AIPlayer": "",
+"Player": ""
+}
+
+[application]
+
+config/name="Tic Tac Toe"
+run/main_scene="res://scenes/Game.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Util="*res://scripts/util.gd"
+
+[debug]
+
+gdscript/warnings/narrowing_conversion=false
+gdscript/warnings/integer_division=false
+
+[display]
+
+window/size/width=832
+window/size/height=570
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
